@@ -12,8 +12,8 @@ RUN mkdir -p /source/assets
 #RUN curl -fL https://releases.rancher.com/os/latest/rootfs_arm64.tar.gz > /source/assets/rootfs_arm64.tar.gz
 COPY rootfs_arm64.tar.gz /source/assets/rootfs_arm64.tar.gz
 
-ENV KERNEL_URL=https://github.com/Jason-ZW/os-rpi-kernel/releases/download/v4.14.114-rancher/4.14.114-rancheros-v8.tar.gz
-ENV BOOTLOADER_URL=https://github.com/Jason-ZW/os-rpi-kernel/releases/download/v4.14.114-rancher/rpi-bootloader.tar.gz
+ENV KERNEL_URL=https://github.com/btharper/os-rpi-kernel/releases/download/v4.19.80-rpi4-beta/4.19.80-rancheros-v8-pi4.tar.gz
+ENV BOOTLOADER_URL=https://github.com/btharper/os-rpi-kernel/releases/download/v4.19.80-rpi4-beta/rpi-bootloader-pi4.tar.gz
 
 RUN curl -fL ${KERNEL_URL} > /source/assets/kernel.tar.gz
 RUN curl -fL ${BOOTLOADER_URL} > /source/assets/rpi-bootfiles.tar.gz
